@@ -1,0 +1,22 @@
+@import './reset.css';
+
+:root {
+  @media only screen and (min-width: 0) {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    font-size: 14.5px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    font-size: 15px;
+  }
+}
+
+:global {
+  html,
+  body {
+    background-color: rgba(16, 16, 16, 1);
+  }
+}
