@@ -63,7 +63,7 @@
           "named": "never"
         }
       ],
-      "no-console": "off",
+      "no-console": "error",
       "no-tabs": "off",
       "eqeqeq": "off",
       "react/prop-types": [
