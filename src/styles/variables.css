@@ -2,4 +2,12 @@
   /*Colors*/
   --primary: rgba(0, 0, 0, 1);
   --secondary: rgba(255, 227, 0, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  /* Text Sizes */
+  --text-light: 300;
+  --text-regular: 400;
+  --text-medium: 500;
+  --text-bold: 700;
+  --text-black: 900;
 }
