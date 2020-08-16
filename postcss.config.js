@@ -10,7 +10,7 @@ module.exports = ({ file, options, env }) => ({
     'postcss-advanced-variables': {},
     'postcss-calc': {},
     'postcss-color-function': {},
-    'postcss-custom-media': {},
+    'postcss-custom-media': { importFrom: './src/styles/viewports.css' },
     'postcss-custom-properties': { preserve: false, importFrom: './src/styles/variables.css' },
     'postcss-custom-selectors': {},
     'postcss-extend': {},
