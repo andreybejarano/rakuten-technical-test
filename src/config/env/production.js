@@ -1,6 +1,8 @@
 export default {
   env: 'production',
-  apis: {
-
+  api: {
+    rakuten: {
+      basePath: 'https://gizmo.rakuten.tv/v3'
+    }
   }
 };

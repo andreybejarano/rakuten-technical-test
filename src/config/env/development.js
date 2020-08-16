@@ -1,6 +1,8 @@
 export default {
   env: 'development',
-  apis: {
-
+  api: {
+    rakuten: {
+      basePath: '/api'
+    }
   }
 };

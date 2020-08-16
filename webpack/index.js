@@ -44,10 +44,18 @@ module.exports = (_env, argv) => {
       contentBase: path.join(__dirname, '../dist'),
       publicPath: '/',
       host: '0.0.0.0',
+      port: 5000,
+      proxy: {
+        '/api': {
+          target: 'https://gizmo.rakuten.tv/v3',
+          changeOrigin: true,
+          pathRewrite: { '^/api': '' }
+        }
+      },
+      public: 'localhost:5000',
       historyApiFallback: true,
       useLocalIp: true,
       inline: true,
-      port: 5000,
       hot: true,
       disableHostCheck: false,
       writeToDisk: true
@@ -200,6 +208,24 @@ module.exports = (_env, argv) => {
             }
           ]
         },
+        {
+          // Now we apply rule for images
+          test: /\.(png|jpe?g|gif|svg)$/,
+          use: [
+            {
+              // Using file-loader for these files
+              loader: 'file-loader',
+
+              // In options we can set different things like format
+              // and directory to save
+              options: {
+                outputPath: 'statics/images',
+                name: '[name].[ext]'
+              }
+            }
+          ]
+        },
+
         // DO NOT FORGET to update `exclude` list when you adding a new loader
         {
           exclude: [
