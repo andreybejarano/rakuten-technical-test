@@ -1,6 +1,6 @@
 .h1 {
-  font-size: 6.2rem;
-  line-height: 6.2rem;
+  font-size: 6rem;
+  line-height: 1.167;
   font-weight: var(--text-light);
   letter-spacing: getLetterSpacing(-1.5, 6.2);
   text-decoration: inherit;
@@ -9,18 +9,18 @@
 }
 
 .h2 {
-  font-size: 3.95rem;
-  line-height: 3.95rem;
-  font-weight: var(--text-black);
-  letter-spacing: getLetterSpacing(-0.5, 3.95);
+  font-size: 3.75rem;
+  line-height: 1.2;
+  font-weight: var(--text-light);
+  letter-spacing: getLetterSpacing(-0.8, 3.3);
   text-decoration: inherit;
   text-transform: inherit;
   text-shadow: 0px 0px 3px var(--white);
 }
 
 .h3 {
-  font-size: 3.2rem;
-  line-height: 3.325rem;
+  font-size: 3rem;
+  line-height: 1.167;
   font-weight: var(--text-regular);
   letter-spacing: normal;
   text-decoration: inherit;
@@ -29,18 +29,18 @@
 }
 
 .h4 {
-  font-size: 2.325rem;
-  line-height: 2.7rem;
+  font-size: 2.125rem;
+  line-height: 1.235;
   font-weight: var(--text-regular);
-  letter-spacing: getLetterSpacing(0.25, 2.325);
+  letter-spacing: getLetterSpacing(0.7, 3.5);
   text-decoration: inherit;
   text-transform: inherit;
   text-shadow: 0px 0px 2px var(--white);
 }
 
 .h5 {
-  font-size: 1.7rem;
-  line-height: 2.2rem;
+  font-size: 1.5rem;
+  line-height: 1.334;
   font-weight: var(--text-regular);
   letter-spacing: normal;
   text-decoration: inherit;
@@ -49,10 +49,10 @@
 }
 
 .h6 {
-  font-size: 1.45rem;
-  line-height: 2.2rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
   font-weight: var(--text-medium);
-  letter-spacing: getLetterSpacing(0.25, 1.45);
+  letter-spacing: getLetterSpacing(0.7, 5);
   text-decoration: inherit;
   text-transform: inherit;
   margin: 0 0 0.46rem 0;
@@ -61,53 +61,53 @@
 
 .subtitle1 {
   color: #fff;
-  font-size: 1.7rem;
-  line-height: 1.95rem;
+  font-size: 1rem;
+  line-height: 1.75;
   font-weight: var(--text-regular);
-  letter-spacing: getLetterSpacing(0.15, 1.2);
+  letter-spacing: getLetterSpacing(0.9, 3.8);
   text-decoration: inherit;
   text-transform: inherit;
 }
 
 .subtitle2 {
-  font-size: 1.075rem;
-  line-height: 1.375rem;
+  font-size: 0.875rem;
+  line-height: 1.57;
   font-weight: var(--text-medium);
-  letter-spacing: getLetterSpacing(0.1, 1.075);
+  letter-spacing: getLetterSpacing(0.7, 1.4);
   text-decoration: inherit;
   text-transform: inherit;
 }
 
 .body1 {
-  font-size: 1.5rem;
-  line-height: 1.7rem;
+  font-size: 1rem;
+  line-height: 1.5;
   font-weight: var(--text-regular);
-  letter-spacing: getLetterSpacing(0.5, 1.2);
+  letter-spacing: getLetterSpacing(0.9, 3.8);
   text-decoration: inherit;
   text-transform: inherit;
 }
 
 .body2 {
-  font-size: 1.075rem;
-  line-height: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.43;
   font-weight: var(--text-regular);
-  letter-spacing: getLetterSpacing(.25, 1.075);
+  letter-spacing: getLetterSpacing(0.10, 7.1);
   text-decoration: inherit;
   text-transform: inherit;
 }
 
 .caption1 {
-  font-size: 1.2rem;
-  line-height: 1.7rem;
+  font-size: 0.75rem;
+  line-height: 1.66;
   font-weight: var(--text-regular);
-  letter-spacing: getLetterSpacing(0.5, 1.2);
+  letter-spacing: getLetterSpacing(0.3, 3.3);
   text-decoration: inherit;
   text-transform: inherit;
 }
 
 .caption2 {
-  font-size: .95rem;
-  line-height: 1.45rem;
+  font-size: .65rem;
+  line-height: 1.45;
   font-weight: var(--text-regular);
   letter-spacing: getLetterSpacing(.4, .95);
   text-decoration: inherit;
