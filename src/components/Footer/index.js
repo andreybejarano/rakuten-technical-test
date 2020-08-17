@@ -10,7 +10,7 @@ class Footer extends React.Component {
         <Text variant="body1" className={styles.text}>
           Created by Erik Andrey Bejarano Sánchez
         </Text>
-        <img className={styles.logo} src={'statics/images/logo.svg'}></img>
+        <img className={styles.logo} src={'/statics/images/logo.svg'}></img>
       </footer>
     );
   }
