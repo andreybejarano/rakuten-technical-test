@@ -1,0 +1,64 @@
+$easing: cubic-bezier(.8, .0, .4, .8);
+$speed: 1320ms;             /* overall time taken for all the partitions to meet once*/
+$color: #ffffff;            /* Blue A200 in the Material Design color palette*/
+$linecap: square;             /* could be 'round', but the official one is square*/
+$partitions: 5;                  /* number of points where the arc meets*/
+$arc: 0.72;               /* fraction of the circumference that the arc grows to*/
+$perimeter: calc(67px * 3.1415);        /* circumference of the raw svg inner cricle*/
+.root {
+  height: 6rem;
+  width: 6rem;
+  font-size: 0;
+  display: inline-block;
+  animation: outer calc($speed * $partitions) linear infinite;
+
+  svg {
+    animation: inner $speed linear infinite;
+
+    circle {
+      fill: none;
+      stroke: $color;
+      stroke-linecap: $linecap;
+      animation: arc $speed $easing infinite;
+    }
+  }
+}
+
+@keyframes outer {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes inner {
+  0% {
+    transform: rotate(calc(-360deg * (1 - $arc)));
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes arc {
+  0% {
+    stroke-dasharray: 1 $perimeter;
+    stroke-dashoffset: 0;
+  }
+
+  40% {
+    stroke-dasharray: calc($arc * $perimeter), $perimeter;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dasharray: 1 $perimeter;
+    stroke-dashoffset: calc(-$arc * $perimeter);
+  }
+}
+
+
