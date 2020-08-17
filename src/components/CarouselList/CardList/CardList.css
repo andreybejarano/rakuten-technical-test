@@ -1,0 +1,21 @@
+.root {
+  display: inline-table;
+  padding-bottom: 22rem;
+  padding-right: 15rem;
+  margin-right: 0.5rem;
+  background: url(statics/images/negative-portrait.png);
+  transition: 400ms transform;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @media only screen and (--viewport-xs) {
+    padding-bottom: 25rem;
+    padding-right: 21rem;
+  }
+
+  &:hover {
+    outline: 4px solid var(--secondary);
+    box-shadow: 0px 0px 4px 4px var(--secondary);
+    z-index: 1;
+  }
+}
