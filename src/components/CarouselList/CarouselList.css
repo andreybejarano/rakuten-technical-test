@@ -25,10 +25,14 @@
     align-items: center;
     justify-content: center;
     width: 4rem;
-    height: 89%;
+    height: 22rem;
     bottom: 0;
     z-index: 100;
     cursor: pointer;
+
+    @media only screen and (--viewport-xs) {
+      height: 25rem;
+    }
 
     i {
       user-select: none;

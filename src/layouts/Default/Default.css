@@ -2,6 +2,7 @@
   position: relative;
 
   .content {
+    min-height: 75vh;
     margin-top: 5rem;
     padding-bottom: 9rem;
   }
