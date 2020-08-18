@@ -3,6 +3,7 @@ import { routerReducer } from 'react-router-redux';
 
 import list from './list';
 import movie from './movie';
+import streamings from './streaming';
 
 // Creates the main reducer with the dynamically injected ones
 export default combineReducers({
@@ -10,5 +11,6 @@ export default combineReducers({
   routing: routerReducer,
   // our recucers
   list,
-  movie
+  movie,
+  streamings
 });
