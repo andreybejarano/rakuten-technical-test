@@ -10,8 +10,15 @@ import styles from './Home.css';
 
 class Home extends React.Component {
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(getAllLists());
+    const { dispatch, lists } = this.props;
+    if (!lists.data) {
+      dispatch(getAllLists());
+    }
+  }
+
+  onSelectContent = (content) => {
+    const { history } = this.props;
+    history.push(`/content-detail/${content.id}`);
   }
 
   render() {
@@ -23,11 +30,18 @@ class Home extends React.Component {
             <Loader></Loader>
           </div>
         }
-        {lists.success &&
+        <div className={styles.containerList}>
+          {lists.success &&
           lists.data.map((item, key) =>
-            item.list && <CarouselList list={item.list} key={key}></CarouselList>
+            item.list &&
+            <CarouselList
+              key={key}
+              list={item.list}
+              onSelectContent={this.onSelectContent}
+            ></CarouselList>
           )
-        }
+          }
+        </div>
       </div>
     );
   }

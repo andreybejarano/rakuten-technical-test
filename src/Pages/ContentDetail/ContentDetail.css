@@ -1,0 +1,110 @@
+.root {
+  .container-loader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .trailer {
+    transition: 600ms all ease-in-out;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .show-trailer {
+    opacity: 1;
+    z-index: 300;
+  }
+
+  .container-player {
+    position: relative;
+    padding-bottom: 50%;
+    display: flex;
+    justify-content: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    .loader,
+    .play-trailer {
+      display: flex;
+      position: absolute;
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+
+    .play-trailer {
+      align-items: center;
+      justify-content: center;
+      height: 8rem;
+      width: 8rem;
+      cursor: pointer;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.8);
+
+      i {
+        font-size: 4rem;
+        color: var(--secondary);
+      }
+    }
+  }
+
+  .info {
+    padding: 0 0.5rem;
+
+    i {
+      vertical-align: sub;
+      width: 1.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .metadata {
+      margin-bottom: 1rem;
+      display: flex;
+
+      :not(:first-child) {
+        margin-left: 1rem;
+      }
+
+      @media only screen and (--viewport-xs), (--viewport-s) {
+        flex-direction: column;
+
+        :not(:first-child) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .plot,
+    .container-languages {
+      margin-bottom: 2rem;
+    }
+
+    .plot {
+      text-align: justify;
+      max-width: 70%;
+      margin-bottom: 2rem;
+      padding: 0 0.5rem;
+
+      @media only screen and (--viewport-xs), (--viewport-s) {
+        max-width: 100%;
+      }
+    }
+
+    .container-languages {
+      .languages {
+        display: flex;
+        margin-left: 0.5rem;
+
+        .audios,
+        .subtitles {
+          min-width: 10rem;
+        }
+      }
+    }
+  }
+}
