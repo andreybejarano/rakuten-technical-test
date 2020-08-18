@@ -10,7 +10,12 @@ class Pages extends React.Component {
   render() {
     return (
       <Route render={({ location, history }) =>
-        <Layout location={location} history={history} routes={routes}>
+        <Layout
+          location={location}
+          history={history}
+          routes={routes}
+          contentSelected={this.props.contentSelected}
+        >
           <Switch>
             {
               routes.map((route, key) =>
@@ -30,4 +35,8 @@ class Pages extends React.Component {
   }
 };
 
-export default connect()(Pages);
+const mapStateToProps = state => ({
+  contentSelected: state.movie.selected
+});
+
+export default connect(mapStateToProps)(Pages);

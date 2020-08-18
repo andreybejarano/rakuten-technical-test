@@ -6,9 +6,13 @@ import styles from './Default.css';
 
 class Default extends React.Component {
   render() {
+    const { contentSelected, location } = this.props;
+    const { title } = (contentSelected.data && location.pathname !== '/')
+      ? contentSelected.data
+      : {};
     return (
       <div className={styles.root}>
-        <Header></Header>
+        <Header title={title}></Header>
         <div className={styles.content}>
           {this.props.children}
         </div>

@@ -3,5 +3,9 @@
     min-height: 69vh;
     margin-top: 4rem;
     padding-bottom: 9rem;
+
+    @media only screen and (--viewport-xs), (--viewport-s) {
+      margin-top: 5.5rem;
+    }
   }
 }

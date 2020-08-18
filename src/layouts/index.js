@@ -14,7 +14,7 @@ class Layout extends React.Component {
       };
     }, {});
     const layouts = {
-      default: (<Default history={history}>{children}</Default>)
+      default: (<Default {...this.props}>{children}</Default>)
     };
     const layout = routesLayouts[path];
     return layouts[layout] ? layouts[layout] : layouts.default;

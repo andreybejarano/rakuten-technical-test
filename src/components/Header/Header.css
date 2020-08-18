@@ -6,11 +6,26 @@
   top: 0;
   right: 0;
   left: 0;
-  height: 4rem;
+  min-height: 4rem;
   z-index: 200;
   background: var(--primary);
 
+  @media only screen and (--viewport-xs), (--viewport-s) {
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+
+    .title > * {
+      font-size: 1.3rem;
+    }
+  }
+
   .logo {
     height: 2.5rem;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
   }
 }
