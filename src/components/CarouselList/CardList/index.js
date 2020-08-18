@@ -10,6 +10,14 @@ class CardList extends React.Component {
     content: PropTypes.object
   }
 
+  static contextTypes = {
+    CarouselListComponent: PropTypes.object
+  }
+
+  handleSelectedContent = (content) => {
+    this.context.CarouselListComponent.handleSelectedContent(content);
+  }
+
   render() {
     const { className, content } = this.props;
     return (
@@ -21,6 +29,7 @@ class CardList extends React.Component {
         style={{
           backgroundImage: `url(${content.images.artwork}`
         }}
+        onClick={() => this.handleSelectedContent(content)}
       ></div>
     );
   }

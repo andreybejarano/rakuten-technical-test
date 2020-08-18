@@ -8,13 +8,30 @@ import styles from './CarouselList.css';
 
 class CarouselList extends React.Component {
   static propTypes = {
-    list: PropTypes.object
+    list: PropTypes.object,
+    onSelectContent: PropTypes.func
+  }
+
+  static defaultProps = {
+    onSelectContent: () => null
   }
 
   wrap = null;
 
   state = {
     translateTo: 0
+  }
+
+  /** Child context types. Note: These object keys must be initialized by method getChildContext() */
+  static childContextTypes = {
+    CarouselListComponent: PropTypes.object
+  }
+
+  /**
+   * Method inicializer Child Context
+   */
+  getChildContext() {
+    return { CarouselListComponent: this };
   }
 
   handlerScrollWrap = (direction) => {
@@ -35,6 +52,10 @@ class CarouselList extends React.Component {
     this.setState({ translateTo });
   }
 
+  handleSelectedContent(content) {
+    this.props.onSelectContent(content);
+  }
+
   render() {
     const { list } = this.props;
     return (
@@ -51,6 +72,7 @@ class CarouselList extends React.Component {
           {
             list.contents.data.map((content, key) =>
               <CardList
+                contentSelected={this.handleSelectContent}
                 content={content}
                 key={key}
               ></CardList>

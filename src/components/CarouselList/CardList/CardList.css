@@ -1,7 +1,7 @@
 .root {
   display: inline-table;
-  padding-bottom: 22rem;
-  padding-right: 15rem;
+  padding-bottom: percentage(15/75);
+  padding-right: percentage(15/100);
   margin-right: 0.5rem;
   background: url(statics/images/negative-portrait.png);
   transition: 400ms transform;
@@ -10,7 +10,7 @@
 
   @media only screen and (--viewport-xs) {
     padding-bottom: 25rem;
-    padding-right: 21rem;
+    padding-right: 18rem;
   }
 
   &:hover {
