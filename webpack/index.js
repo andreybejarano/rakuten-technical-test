@@ -95,6 +95,7 @@ module.exports = (_env, argv) => {
     },
     plugins: [
       new webpack.DefinePlugin({
+        'process.env.BASE_NAME': `"${process.env.BASE_NAME || '/'}"`,
         'process.env.NODE_ENV': `"${process.env.NODE_ENV}"`,
         'process.env.BROWSER': true,
         'process.env.version': `"${pkg.version}"`

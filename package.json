@@ -6,6 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --config=webpack/index.js --mode=production",
     "dev": "NODE_ENV=development webpack-dev-server --config=webpack/index.js --open --mode=development",
+    "build:st": "BASE_NAME=rakuten-tv npm run build",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "preinstall": "npx npm-force-resolutions"
