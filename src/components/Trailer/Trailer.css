@@ -30,6 +30,16 @@
   }
 
   video {
-    width: 95%;
+    width: 85%;
+    background: black;
+    height: auto;
+
+    &:focus {
+      outline: none;
+    }
+
+    @media only screen and (--viewport-xs), (--viewport-s) {
+      width: 95%;
+    }
   }
 }

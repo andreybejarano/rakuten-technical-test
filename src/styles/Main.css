@@ -55,4 +55,8 @@
     overflow: hidden auto;
     background-color: rgba(16, 16, 16, 1);
   }
+
+  body {
+    position: relative;
+  }
 }
