@@ -72,7 +72,6 @@ class CarouselList extends React.Component {
           {
             list.contents.data.map((content, key) =>
               <CardList
-                contentSelected={this.handleSelectContent}
                 content={content}
                 key={key}
               ></CardList>
