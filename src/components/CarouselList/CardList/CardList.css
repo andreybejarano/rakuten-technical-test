@@ -7,6 +7,7 @@
   transition: 400ms transform;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  cursor: pointer;
 
   @media only screen and (--viewport-xs) {
     padding-bottom: 25rem;

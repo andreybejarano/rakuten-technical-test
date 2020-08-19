@@ -39,7 +39,7 @@ $ npm run dev
 When development mode is executed, the default browser opens automatically; otherwise, open your browser on http://localhost:5000 this is restarted when changes to the source are saved
 
 ## Test
-For run test you have to run this command on an terminal or console:
+For runnig the test you have to run this command on a terminal or console:
 ``` shell
 $ npm run test
 ```
